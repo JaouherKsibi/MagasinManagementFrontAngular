@@ -1,0 +1,24 @@
+<h2>Add Magasin</h2>
+<form>
+  <div class="form-group mb-3">
+    <label for="nom">Nom </label>
+    <input
+      type="text"
+      class="form-control "
+      id="nom"
+      [(ngModel)]="magasin.nom"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+  <div class="form-group mb-3">
+    <label for="lieu">Lieu</label>
+    <input
+      type="text"
+      class="form-control"
+      id="lieu"
+      [(ngModel)]="magasin.lieu"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="add()">add</button>
+</form>

@@ -1,0 +1,34 @@
+<div class="list row">
+  <h4>Magasin List</h4>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let magasin of magasins">
+        <td scope="row">
+          {{ magasin.id }}
+        </td>
+        <td>
+          {{ magasin.nom }}
+        </td>
+        <td>
+          <a
+            routerLink="../listeProduits/{{ magasin.id }}"
+            class="btn btn-success"
+            >show details</a
+          >
+        </td>
+        <td>
+          <button class="btn btn-primary" (click)="delete(magasin)">
+            delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
